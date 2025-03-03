@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devops-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devops-api
+  template:
+    metadata:
+      labels:
+        app: devops-api
+    spec:
+      containers:
+        - name: meu-app
+          image: gscjr/devops-api:latest # Substitua pelo seu nome de usuário no Docker Hub
+          ports:
+            - containerPort: 3333
+          env:
+            - name: NODE_ENV
+              value: "production"
