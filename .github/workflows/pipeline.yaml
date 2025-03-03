@@ -31,8 +31,8 @@ jobs:
 
       - name: Atualizar manifestos no repositório Git do ArgoCD
         run: |
-          git clone https://${{ secrets.GIT_REPO_TOKEN }}@github.com/seu-usuario/argocd-manifestos.git
-          cd argocd-manifestos
+          git clone https://${{ secrets.GIT_REPO_TOKEN }}@github.com/George-b1t/devops-api.git
+          cd k8s
 
           # Atualiza a imagem no arquivo `kustomization.yaml`
           sed -i "s|newTag: .*|newTag: $IMAGE_TAG|" k8s/kustomization.yaml
