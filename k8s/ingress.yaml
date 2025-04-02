@@ -6,7 +6,7 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-    - host: app.acconsultoriase.com.br
+    - host: devopsapi.georgesoares.dev
       http:
         paths:
           - path: /
