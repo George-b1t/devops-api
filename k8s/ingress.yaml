@@ -3,14 +3,13 @@ kind: Ingress
 metadata:
   name: devops-api-ingress
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
     cert-manager.io/cluster-issuer: letsencrypt-prod
+    kubernetes.io/ingress.class: traefik
 spec:
-  ingressClassName: nginx
   tls:
     - hosts:
         - devopsapi.georgesoares.dev
-      secretName: devopsapi-georgesoares-dev-tls-ffvtw
+      secretName: devops-api-tls
   rules:
     - host: devopsapi.georgesoares.dev
       http:
