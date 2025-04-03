@@ -9,7 +9,7 @@ spec:
   tls:
     - hosts:
         - devopsapi.georgesoares.dev
-      secretName: devopsapi-georgesoares-dev-tls
+      secretName: devopsapi-georgesoares-dev-tls-ffvtw
   rules:
     - host: devopsapi.georgesoares.dev
       http:
