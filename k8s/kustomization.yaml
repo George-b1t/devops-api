@@ -8,4 +8,4 @@ resources:
 
 images:
   - name: gscjr/devops-api
-    newTag: '20250402234050'
+    newTag: '20250403003928'
