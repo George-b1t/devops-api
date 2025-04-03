@@ -4,7 +4,12 @@ metadata:
   name: devops-api-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
+    cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
+  tls:
+    - hosts:
+        - devopsapi.georgesoares.dev
+      secretName: devopsapi-georgesoares-dev-tls
   rules:
     - host: devopsapi.georgesoares.dev
       http:
